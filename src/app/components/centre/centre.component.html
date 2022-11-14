@@ -1,0 +1,115 @@
+<div style="margin-left:195px;background-color:pink; width:900px; height:105px; margin-top:100px;">
+    <form style="margin-left:100px; margin-top:70px;" [formGroup]="sign" (ngSubmit)="onSubmit()">
+    <table>
+      <tr>
+        <td style="width:350px;">
+          <table>
+            <tr>
+              <td>Country :</td>
+              <td style="width:200px; background-color: white;"><ng-multiselect-dropdown #multiSelect
+          [placeholder]="'Select country'" 
+          [data]="country" 
+          formControlName = "country"
+          [settings]="settings"
+          >
+        </ng-multiselect-dropdown></td>
+      
+          </tr>
+        </table>
+        </td>
+        <td style="width:250px; background-color: white;">
+          <table>
+            <tr>
+              <td style="background-color: pink;">State :</td>
+              <td style="width:200px;"><ng-multiselect-dropdown #multiSelect
+          [placeholder]="'Select State'" 
+          [data]="state" 
+          formControlName = "state"
+          [settings]="settings"
+          >
+        </ng-multiselect-dropdown></td>
+      
+          </tr>
+        </table>
+        </td>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;
+        <td><button class="btn btn-primary" type="submit">submit</button></td>
+      </tr>
+    </table>  
+    
+  </form>        
+  </div>
+  <br>
+  <div *ngIf="tab==true" style="width:500px;margin-left:350px;">
+  <table style="width:700px;">
+    <tr>
+      <th>Hospital</th>
+      <th>City</th>
+      <th>Contact</th>
+      
+    </tr>
+    <tr>
+      <td>Guru Cancer Treatment Center</td>
+      <td>Madurai</td>
+      <td> 077080 72543</td>
+      <td><a href="http://www.cancer-treatment-madurai.com/">Visit Website</a></td>
+  
+    </tr>
+    <tr>
+      <td>Harshamitra Superspeciality Cancer Hospital</td>
+      <td>Tiruchirappaly</td>
+      <td>073737 31008</td>
+      <td><a href="http://harshamitra.com/">Visit Website</a></td>
+    </tr>
+    <tr>
+      <td>KMCH Cancer Center</td>
+      <td>Coimbatore</td>
+      <td> 0422 432 4433</td>
+      <td><a href="http://www.kmchhospitals.com/cancer-treatment/">Visit Website</a></td>
+    </tr>
+    <tr>
+      <td>Madurai Cancer Centre</td>
+      <td>Madurai</td>
+      <td>098430 50911</td>
+      <td><a href="https://www.cancer-treatment-madurai.com/">Visit Website</a></td>
+    </tr>
+    <tr>
+      <td>Chennai Cancer Care</td>
+      <td>Chennai</td>
+      <td>044 4284 0777</td>
+      <td><a href="http://chennaicancercare.in/">Visit Website</a></td>
+    </tr>
+    
+  </table>
+  </div>
+  <div *ngIf="tab==false" style="width:500px;margin-left:350px;">
+    <table style="width:700px;">
+      <tr>
+        <th>Hospital</th>
+        <th>City</th>
+        <th>Contact</th>
+        
+      </tr>
+      <tr>
+        <td>HOMI BHABHA CANCER HOSPITAL</td>
+        <td>Sangrur</td>
+        <td> 0167 224 1241</td>
+        <td><a href="https://tmc.gov.in/">Visit Website</a></td>
+    
+      </tr>
+      <tr>
+        <td>Punjab Cancer Care & Multispeciality Hospital</td>
+        <td>Bathinda</td>
+        <td>087288 40999</td>
+        <td><a href="https://punjab.cancer.care">Visit Website</a></td>
+      </tr>
+      <tr>
+        <td>Sandhu Cancer Centre</td>
+        <td>Ludhiana</td>
+        <td> 098723 91155</td>
+        <td><a href="http://www.sandhucancercentre.com/">Visit Website</a></td>
+      </tr>
+      
+    </table>
+    </div>

@@ -1,0 +1,61 @@
+<div style="margin-left:215px;background-color:pink; width:1000px; height:455px; margin-top:60px;">
+<div *ngIf="track=='true'">
+    <div style="margin-left: 450px;">
+        <b style="font-weight: bolder; font-size: x-large;">TRACKER</b>
+    </div>
+<div class="row" style="margin-left: 40px;">
+    <div class="column" style="margin-top:100px;">
+        <ngb-carousel *ngIf="event_list">
+            <ng-template ngbSlide *ngFor="let event of past_events">
+              <img [src]="event.img" height="300" width="440" alt="Random slide">
+              <div class="carousel-caption">
+                <p style="color:rgb(3, 3, 3); font-weight: 600;" [innerText]="event.eventDescription"></p>
+              </div>
+            </ng-template>
+          </ngb-carousel>
+    </div>
+    &nbsp;
+    &nbsp;&nbsp;
+    <div class="column" *ngIf="value=='1'" style="margin-top:100px;">
+            <img src="../assets/percentage/1.jpg" height="300" width="500">
+    </div>
+    <div class="column" *ngIf="value=='2'" style="margin-top:100px;">
+        <img src="../assets/percentage/2.jpg" height="300" width="500">
+    </div>
+    <div class="column" *ngIf="value=='3'" style="margin-top:100px;">
+        <img src="../assets/percentage/3.jpg" height="300" width="500">
+    </div>
+    <div class="column" *ngIf="value=='4'" style="margin-top:100px;">
+        <img src="../assets/percentage/4.jpg" height="300" width="500">
+    </div>
+    <div class="column" *ngIf="value=='5'" style="margin-top:100px;">
+        <img src="../assets/percentage/5.jpg" height="300" width="500">
+    </div>
+    
+</div>
+<br>
+<form  #form="ngForm" (submit)="checkExerciseStatus(form)" autocomplete="off">
+<div class="row" style="margin-left: 50px;">
+    <div class="column">
+        <b>Have you completed today's exercises ?</b>&nbsp;&nbsp;
+        <input id="exercise" required name="exercise" type="radio" value="Yes" ngModel>Yes
+        <input style= "margin-left:15px;" id="exercise" name="exercise" type="radio" value="No" ngModel>No
+    </div>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <div class="column">
+        <b>Daily Exercise Progress</b>
+    </div>
+</div>
+<br>
+<div class="row" style="margin-left: 240px;">
+    <button (click)="checkExerciseStatus(form)" type="summit" class="btn btn-success">Submit</button>
+</div>
+</form>
+</div>
+<div *ngIf="track=='false'" style="margin-top: 250px;">
+    <b style="margin-left:350px; font-weight: 600; font-size: 30px;">Please Login First</b>
+</div>
+</div>

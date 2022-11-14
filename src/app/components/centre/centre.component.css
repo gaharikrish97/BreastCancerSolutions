@@ -1,0 +1,7 @@
+tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+  a{
+      text-decoration:underline;
+      text-underline-position:below;
+  }

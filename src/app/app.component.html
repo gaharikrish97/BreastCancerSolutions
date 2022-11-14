@@ -1,0 +1,56 @@
+
+<div  style="width: 1350px; height:60px; background-color:deeppink;display:flex;" class="fixed-top">
+      
+     <div style="padding-top:7px;padding-left:20px;font-size:30px;">
+      <img src="../assets/bcarelog.jpeg" height=30; width=60;>
+      &nbsp;<b>B-Care</b>
+    </div>
+  <!--<div class="searchbar"style="margin-top:10px;margin-left:100px;">
+      <input class="search_input" type="text" name="" style="color:whitesmoke" placeholder="Search...">
+      <a href="#" class="search_icon"><i class="fa fa-search" aria-hidden="true"></i></a>
+    </div>
+  -->
+    <div *ngIf="log=='true'" style="margin-top:12px;margin-left:950px;">
+      <a><button (click)="logIn()" style="border-radius:10px;width:100px;height:35px;" type="button" class="btn btn-primary btn-sm">Login</button></a>
+    </div>
+     <div *ngIf="log=='false'" style="margin-top:12px;margin-left:950px;">
+        <a ><button (click)="logOut()" style="border-radius:10px;width:100px;height:35px;" type="button" class="btn btn-primary btn-sm">Logout</button></a>
+    </div>
+</div>
+
+<div class="nav-side-menu" style="margin-top:60px;">
+    <div class="brand">Menu</div>
+    <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
+ 
+        <div class="menu-list">
+ 
+            <ul id="menu-content" class="menu-content collapse out">
+                <li>
+                  <a routerLink="/home" >
+                  <i class="fa fa-home"></i> Home
+                  </a>
+                </li>
+                
+                <li>
+                  <a routerLink="/userdetails"><i class="fa fa-heartbeat"></i>Quick Checkup</a>
+                </li>
+
+                <li>
+                  <a routerLink="/exercise"><i class="fa fa-calendar" ></i> Daily Tracker </a>
+                </li>
+
+                <li>
+                  <a routerLink="/center"><i class="fa fa-car fa-lg"></i> Centers</a>
+                </li>
+
+                 <li>
+                  <a routerLink="/predictor"><i class="fa fa-info-circle" ></i> Help Desk </a>
+                </li>
+
+
+            </ul>
+     </div>
+     
+</div>
+
+<router-outlet></router-outlet>

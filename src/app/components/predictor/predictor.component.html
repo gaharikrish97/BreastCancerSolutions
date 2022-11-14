@@ -1,0 +1,51 @@
+<div class="main-card" style="margin-top:80px;">
+    <div class="main-title"><svg viewBox="0 0 24 24">
+      <path fill="currentColor" d="M12,2A2,2 0 0,1 14,4C14,4.74 13.6,5.39 13,5.73V7H14A7,7 0 0,1 21,14H22A1,1 0 0,1 23,15V18A1,1 0 0,1 22,19H21V20A2,2 0 0,1 19,22H5A2,2 0 0,1 3,20V19H2A1,1 0 0,1 1,18V15A1,1 0 0,1 2,14H3A7,7 0 0,1 10,7H11V5.73C10.4,5.39 10,4.74 10,4A2,2 0 0,1 12,2M7.5,13A2.5,2.5 0 0,0 5,15.5A2.5,2.5 0 0,0 7.5,18A2.5,2.5 0 0,0 10,15.5A2.5,2.5 0 0,0 7.5,13M16.5,13A2.5,2.5 0 0,0 14,15.5A2.5,2.5 0 0,0 16.5,18A2.5,2.5 0 0,0 19,15.5A2.5,2.5 0 0,0 16.5,13Z" />
+      </svg><span>PinkBot</span></div>
+    <div class="chat-area" id="message-box">
+        <div class="height:20px;">
+     
+        <p id="chatlog1" class="chatlog"><b>PinkBot: </b>Hi! I'm <b style="font-weight: 500; color: hotpink;">PinkBot</b>. I'm here to help you !!&nbsp;</p>
+      <p id="chatlog2" style="color:black;" class="chatlog">&nbsp;</p>
+      <p id="chatlog3" style="color:black;" class="chatlog">&nbsp;</p>
+          <p id="chatlog4" class="chatlog">&nbsp;</p>
+      <p id="chatlog5" style="color:black;" class="chatlog">&nbsp;</p>
+      <p id="chatlog6" style="color:black;" class="chatlog">&nbsp;</p>
+      <p id="chatlog7" style="color:black;" class="chatlog">&nbsp;</p>
+      <p id="chatlog8" style="color:black;" class="chatlog">&nbsp;</p>
+      <p id="chatlog9" style="color:black;" class="chatlog">&nbsp;</p>
+      <p id="chatlog10" style="color:black;" class="chatlog">&nbsp;</p>
+      <p id="chatlog11" style="color:black;" class="chatlog">&nbsp;</p>
+      <p id="chatlog12" style="color:black;" class="chatlog">&nbsp;</p>
+      <p id="chatlog13" style="color:black;" class="chatlog">&nbsp;</p>
+      <p id="chatlog5" style="color:black;" class="chatlog">&nbsp;</p>
+      <p id="chatlog6" style="color:black;" class="chatlog">&nbsp;</p>
+      <p id="chatlog7" style="color:black;" class="chatlog">&nbsp;</p>
+      <p id="chatlog8" style="color:black;" class="chatlog">&nbsp;</p>
+      <p id="chatlog9" style="color:black;" class="chatlog">&nbsp;</p>
+      <p id="chatlog10" style="color:black;" class="chatlog">&nbsp;</p>
+      <p id="chatlog11" style="color:black;" class="chatlog">&nbsp;</p>
+      <p id="chatlog12" style="color:black;" class="chatlog">&nbsp;</p>
+      <p id="chatlog13" style="color:black;" class="chatlog">&nbsp;</p>
+    </div>
+  
+    </div>
+    <div class="input-div">
+  <input
+      class="input-message"
+      #chatbox
+      type="text"
+      name="chatbox"
+      id="chatbox"
+      [value]="search"
+      (change)="newEntry(chatbox.value)"
+      placeholder="Hi there! Type here to talk to me."
+      onfocus="this.placeholder = ''"
+      onblur="this.placeholder = 'enter your text'">
+      <button class="input-send" (change)="newEntry(chatbox.value)">
+     <svg style="width:24px;height:24px">
+      <path d="M2,21L23,12L2,3V10L17,12L2,14V21Z" />
+  </svg>
+      </button>
+    </div>
+  </div>

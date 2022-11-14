@@ -1,0 +1,47 @@
+<div style="margin-left:215px;background-color:rgb(255, 255, 255); width:1090px; height:545px; margin-top:60px;">
+    <br>
+    <div>
+        <b style="font-size: 35px; margin-left: 460px;">RESULT</b>
+    </div>
+    <div >
+        <div style="margin-left: 368px;">
+            <B style="font-size: 30px;">You belong to {{category}}</B>
+        </div>
+    </div>
+    <br>
+    <div class="row" style="margin-left: 50px;">
+        <div class="column">
+            <div>
+                <canvas style="height:250px; width:500px;" baseChart
+                [datasets]="barChartData"
+                [labels]="barChartLabels"
+                [options]="barChartOptions"
+                [legend]="barChartLegend"
+                [colors]="chartColors"
+                [chartType]="barChartType"></canvas>
+            </div>
+
+        </div>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        
+        <div class="column">
+            <ngb-carousel *ngIf="event_list">
+                <ng-template ngbSlide *ngFor="let event of past_events">
+                  <img [src]="event.img" height="270" width="450" alt="Random slide">
+                  <div class="carousel-caption">
+                    <h3>{{ event.eventLocation }}</h3>
+                    <p style="color:rgb(3, 3, 3); font-weight: 600;" [innerText]="event.eventDescription"></p>
+                  </div>
+                </ng-template>
+              </ngb-carousel>
+        </div>
+    </div>
+    <div class="row">
+        <div class="column" style="margin-left: 195px;">
+            <b style="font-weight:bolder; font-size:25px;">Live Cluster Graph</b>
+        </div>
+        <div class="column" style="margin-left: 295px;">
+            <b style="font-weight:bolder; font-size:25px;">Suggested Exercises</b>
+        </div>
+    </div>
+</div>

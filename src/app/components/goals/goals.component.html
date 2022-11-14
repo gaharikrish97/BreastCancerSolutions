@@ -1,0 +1,27 @@
+
+<div>
+ <table>
+ <tr>
+ <td>
+<div class="graph">
+    
+    <div style="width:600px;height:250px;">
+    
+    <canvas id="myChart" width="500" height="350" ></canvas>
+   </div>
+
+</div>
+</td>
+<td >
+
+<div style="width:600px;height:200px;">
+    <canvas baseChart
+            [datasets]="barChartData"
+            [labels]="barChartLabels"
+            [options]="barChartOptions"
+            [legend]="barChartLegend"
+            [chartType]="barChartType"></canvas>
+  </div>
+</td>
+</tr>
+</table> 

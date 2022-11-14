@@ -1,0 +1,23 @@
+
+
+    .register_btn:hover {
+      color:rgb(0, 0, 0); 
+      background-color:  rgb(101, 252, 0);
+    }
+
+
+    .form-control{
+        height:30px;
+    }
+
+    .align{
+        width:400px;
+    }
+
+    .multiselect-dropdown[_ngcontent-cfl-c2] {
+        position: relative;
+        width: 100%;
+        font-size: inherit;
+        font-family: inherit;
+        height: 30px;
+    }
